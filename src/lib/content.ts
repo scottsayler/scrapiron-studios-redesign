@@ -40,30 +40,42 @@ export const stats = [
   { value: "∞", label: "Replay-worthy moments" },
 ] as const;
 
-export const work = [
+export const highlightVideos = [
   {
-    title: "Epic Action",
-    category: "Game Highlights",
+    id: "dJydxNuqSmM",
+    title: "Game Highlight Reel",
     description:
-      "Game-changing plays cut with pace, impact, and the energy your fans feel in the stands.",
-    image:
-      "https://custom-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,fl_lossy,h_9000,w_1200,f_auto,q_auto/13584074/471504_458570.png",
+      "Full-length sports highlight reel with pace, impact, and game-changing moments.",
+    start: 52,
   },
   {
-    title: "Unbelievable Goals",
-    category: "Team Moments",
+    id: "5h1gDL4cEvc",
+    title: "Sports Highlight Reel",
     description:
-      "The scores, saves, and celebrations that bring teams together — edited to share and remember.",
-    image:
-      "https://user-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,fl_lossy,h_720,w_960,f_auto,q_auto/unsplashcom/photo-1579191203932-ed786b1696fe",
+      "Dynamic highlight cut built to capture energy and drive engagement.",
+  },
+] as const;
+
+export const shortVideos = [
+  {
+    id: "EVaC2pzUJ8Q",
+    title: "Quick Highlight Short",
+    description: "Vertical social clip optimized for Shorts, Reels, and TikTok.",
   },
   {
-    title: "Player Spotlights",
-    category: "Athlete Features",
-    description:
-      "Individual athlete stories with intensity and personality — built for recruiting and recognition.",
-    image:
-      "https://user-images.strikinglycdn.com/res/hrscywv4p/image/upload/f_auto,q_auto,w_4096/unsplashcom/photo-1629612455745-7e908c6de1bd?h=9000&w=1200&fit=clip&fm=jpg",
+    id: "fBEfr5uVD9A",
+    title: "Player Moment Short",
+    description: "Fast-cut athlete moment built for social feeds.",
+  },
+  {
+    id: "duHxTe7pMyQ",
+    title: "Game Action Short",
+    description: "Punchy in-game action formatted for mobile.",
+  },
+  {
+    id: "doDETR6rPVw",
+    title: "Sports Clip Short",
+    description: "Scroll-stopping sports content in vertical format.",
   },
 ] as const;
 

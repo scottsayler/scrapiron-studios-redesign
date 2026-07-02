@@ -3,10 +3,13 @@ import { images, site } from "@/lib/content";
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden">
+    <section
+      aria-labelledby="hero-heading"
+      className="relative flex min-h-screen items-center overflow-hidden"
+    >
       <Image
         src={images.hero}
-        alt="Sports action"
+        alt="Athletes on a sports field at sunset — Scrapiron Studios sports video editing and highlight reels"
         fill
         priority
         className="object-cover object-center"
@@ -26,6 +29,7 @@ export function Hero() {
           </p>
 
           <h1
+            id="hero-heading"
             className="animate-fade-up-delay-1 text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl"
             style={{ fontFamily: "var(--font-display)" }}
           >

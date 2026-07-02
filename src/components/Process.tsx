@@ -2,7 +2,11 @@ import { process } from "@/lib/content";
 
 export function Process() {
   return (
-    <section id="process" className="py-24 lg:py-32">
+    <section
+      id="process"
+      aria-labelledby="process-heading"
+      className="py-24 lg:py-32"
+    >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mb-16 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-xl">
@@ -10,6 +14,7 @@ export function Process() {
               How It Works
             </p>
             <h2
+              id="process-heading"
               className="mt-4 text-4xl font-bold tracking-tight text-white sm:text-5xl"
               style={{ fontFamily: "var(--font-display)" }}
             >

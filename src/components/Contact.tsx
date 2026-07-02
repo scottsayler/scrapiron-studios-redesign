@@ -53,7 +53,11 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="border-t border-white/5 py-24 lg:py-32">
+    <section
+      id="contact"
+      aria-labelledby="contact-heading"
+      className="border-t border-white/5 py-24 lg:py-32"
+    >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid gap-16 lg:grid-cols-2">
           <div>
@@ -61,6 +65,7 @@ export function Contact() {
               Contact
             </p>
             <h2
+              id="contact-heading"
               className="mt-4 text-4xl font-bold tracking-tight text-white sm:text-5xl"
               style={{ fontFamily: "var(--font-display)" }}
             >

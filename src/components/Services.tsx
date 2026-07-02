@@ -20,13 +20,18 @@ const icons: Record<string, React.ReactNode> = {
 
 export function Services() {
   return (
-    <section id="services" className="border-t border-white/5 bg-iron-900/30 py-24 lg:py-32">
+    <section
+      id="services"
+      aria-labelledby="services-heading"
+      className="border-t border-white/5 bg-iron-900/30 py-24 lg:py-32"
+    >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto mb-16 max-w-2xl text-center">
           <p className="text-sm font-medium uppercase tracking-[0.2em] text-ember-400">
             Services
           </p>
           <h2
+            id="services-heading"
             className="mt-4 text-4xl font-bold tracking-tight text-white sm:text-5xl"
             style={{ fontFamily: "var(--font-display)" }}
           >

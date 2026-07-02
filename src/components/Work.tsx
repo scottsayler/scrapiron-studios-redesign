@@ -1,73 +1,92 @@
-import Image from "next/image";
-import { work } from "@/lib/content";
+import { highlightVideos, shortVideos } from "@/lib/content";
+import { YouTubePlayer } from "@/components/YouTubePlayer";
 
 export function Work() {
   return (
-    <section id="work" className="py-24 lg:py-32">
+    <section
+      id="work"
+      aria-labelledby="work-heading"
+      className="py-24 lg:py-32"
+    >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mb-16 max-w-2xl">
           <p className="text-sm font-medium uppercase tracking-[0.2em] text-ember-400">
             Portfolio
           </p>
           <h2
+            id="work-heading"
             className="mt-4 text-4xl font-bold tracking-tight text-white sm:text-5xl"
             style={{ fontFamily: "var(--font-display)" }}
           >
             Moments that move people
           </h2>
           <p className="mt-4 text-lg text-iron-400">
-            From game-winning plays to athlete spotlights — every cut is built
-            to capture energy and drive engagement.
+            Watch real highlight reels and social shorts — every cut is built to
+            capture energy and drive engagement.
           </p>
         </div>
 
-        <div className="grid gap-8 lg:grid-cols-3">
-          {work.map((item, index) => (
-            <article
-              key={item.title}
-              className="group relative overflow-hidden rounded-2xl border border-white/5 bg-iron-900"
-            >
-              <div className="relative aspect-[16/10] overflow-hidden">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  sizes="(max-width: 1024px) 100vw, 33vw"
-                  priority={index === 0}
+        <div className="mb-20">
+          <h3
+            className="mb-8 text-sm font-medium uppercase tracking-[0.2em] text-iron-400"
+            style={{ fontFamily: "var(--font-display)" }}
+          >
+            Highlight Reels
+          </h3>
+          <div className="grid gap-8 lg:grid-cols-2">
+            {highlightVideos.map((video) => (
+              <article
+                key={video.id}
+                className="overflow-hidden rounded-2xl border border-white/5 bg-iron-900"
+              >
+                <YouTubePlayer
+                  videoId={video.id}
+                  title={video.title}
+                  start={"start" in video ? video.start : undefined}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-iron-950 via-iron-950/20 to-transparent" />
-
-                <div className="absolute left-4 top-4">
-                  <span className="rounded-full bg-iron-950/80 px-3 py-1 text-xs font-medium uppercase tracking-wider text-ember-400 backdrop-blur-sm">
-                    {item.category}
-                  </span>
-                </div>
-
-                <div className="absolute bottom-4 right-4 flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-white/10 opacity-0 backdrop-blur-sm transition-all group-hover:opacity-100">
-                  <svg
-                    className="h-5 w-5 text-white"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
+                <div className="p-6">
+                  <h4
+                    className="text-xl font-semibold text-white"
+                    style={{ fontFamily: "var(--font-display)" }}
                   >
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
+                    {video.title}
+                  </h4>
+                  <p className="mt-2 text-sm leading-relaxed text-iron-400">
+                    {video.description}
+                  </p>
                 </div>
-              </div>
+              </article>
+            ))}
+          </div>
+        </div>
 
-              <div className="p-6">
-                <h3
-                  className="text-xl font-semibold text-white"
-                  style={{ fontFamily: "var(--font-display)" }}
-                >
-                  {item.title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-iron-400">
-                  {item.description}
-                </p>
-              </div>
-            </article>
-          ))}
+        <div>
+          <h3
+            id="shorts-heading"
+            className="mb-8 text-sm font-medium uppercase tracking-[0.2em] text-iron-400"
+            style={{ fontFamily: "var(--font-display)" }}
+          >
+            Social Shorts
+          </h3>
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-6">
+            {shortVideos.map((video) => (
+              <article
+                key={video.id}
+                className="overflow-hidden rounded-2xl border border-white/5 bg-iron-900"
+              >
+                <YouTubePlayer
+                  videoId={video.id}
+                  title={video.title}
+                  aspect="short"
+                />
+                <div className="p-4">
+                  <h4 className="text-sm font-semibold text-white">
+                    {video.title}
+                  </h4>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </section>
