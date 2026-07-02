@@ -54,11 +54,6 @@ export function Hero() {
             </a>
           </div>
         </div>
-
-        <div className="mt-20 hidden items-center gap-3 text-xs uppercase tracking-widest text-iron-400 lg:flex">
-          <span>Scroll</span>
-          <span className="h-px w-12 bg-iron-600" />
-        </div>
       </div>
 
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-ember-500/50 to-transparent" />

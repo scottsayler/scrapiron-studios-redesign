@@ -3,7 +3,7 @@ export const site = {
   tagline: "Where Hustle Meets Highlight",
   description:
     "Premier sports video editing — highlight reels, hype videos, and social content that turns game-day moments into momentum for your program.",
-  email: "scott.sayler@crimsontech.co",
+  email: "scott@scrapiron.co",
   location: "Illinois, United States",
   url: "https://scrapiron.co",
 } as const;
