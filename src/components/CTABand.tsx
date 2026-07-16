@@ -1,6 +1,18 @@
-import { site } from "@/lib/content";
+import Link from "next/link";
 
-export function CTABand() {
+type CTABandProps = {
+  title?: string;
+  description?: string;
+  ctaLabel?: string;
+  ctaHref?: string;
+};
+
+export function CTABand({
+  title = "What are you trying to build?",
+  description = "Whether you need help growing a sports organization, creating recruiting content, or covering an event — let’s talk about the right next step.",
+  ctaLabel = "Get in Touch",
+  ctaHref = "/contact",
+}: CTABandProps) {
   return (
     <section className="relative overflow-hidden py-20">
       <div className="absolute inset-0 bg-gradient-to-r from-ember-600/20 via-ember-500/10 to-transparent" />
@@ -13,20 +25,16 @@ export function CTABand() {
               className="text-3xl font-bold text-white sm:text-4xl"
               style={{ fontFamily: "var(--font-display)" }}
             >
-              Ready to turn your season into highlights?
+              {title}
             </h2>
-            <p className="mt-4 text-iron-300">
-              Whether it&apos;s one game, a full season, or an upcoming
-              tournament — let&apos;s make video that works as hard as your
-              athletes do.
-            </p>
+            <p className="mt-4 text-iron-300">{description}</p>
           </div>
-          <a
-            href={`mailto:${site.email}?subject=Scrapiron%20Studios%20Project%20Inquiry`}
+          <Link
+            href={ctaHref}
             className="glow-ember shrink-0 rounded-full bg-ember-500 px-10 py-4 text-sm font-semibold text-white transition-all hover:bg-ember-400"
           >
-            Get in Touch
-          </a>
+            {ctaLabel}
+          </Link>
         </div>
       </div>
     </section>

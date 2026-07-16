@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { images, site } from "@/lib/content";
 
 export function Hero() {
@@ -9,7 +10,7 @@ export function Hero() {
     >
       <Image
         src={images.hero}
-        alt="Athletes on a sports field at sunset — Scrapiron Studios sports video editing and highlight reels"
+        alt="Athletes on a sports field at sunset — Scrapiron Studios digital and creative work for sports"
         fill
         priority
         className="object-cover object-center"
@@ -23,40 +24,54 @@ export function Hero() {
 
       <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pb-24 pt-36 lg:px-8 lg:pt-44">
         <div className="max-w-3xl">
-          <p className="animate-fade-up mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-ember-400 backdrop-blur-sm">
-            <span className="h-1.5 w-1.5 rounded-full bg-ember-500" />
-            Sports Video Editing
+          <p className="animate-fade-up mb-6 text-sm font-medium uppercase tracking-[0.2em] text-ember-400">
+            Sports organizations · Athletes · Events
+          </p>
+
+          <p
+            className="animate-fade-up-delay-1 text-5xl font-bold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl"
+            style={{ fontFamily: "var(--font-display)" }}
+          >
+            <span className="text-gradient">{site.name}</span>
           </p>
 
           <h1
             id="hero-heading"
-            className="animate-fade-up-delay-1 text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl"
+            className="animate-fade-up-delay-1 mt-4 text-2xl font-semibold leading-snug tracking-tight text-iron-100 sm:text-3xl lg:text-4xl"
             style={{ fontFamily: "var(--font-display)" }}
           >
-            <span className="text-gradient block">{site.name}</span>
-            <span className="mt-2 block text-3xl font-medium text-iron-300 sm:text-4xl lg:text-5xl">
-              {site.tagline}
-            </span>
+            Digital and Creative Work Built for Sports
           </h1>
 
           <p className="animate-fade-up-delay-2 mt-8 max-w-xl text-lg leading-relaxed text-iron-300 sm:text-xl">
-            {site.description}
+            Scrapiron Studios helps sports organizations grow, athletes get
+            noticed, and events capture the moments that matter through
+            websites, branding, photography, video, and digital content.
           </p>
 
           <div className="animate-fade-up-delay-3 mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
-            <a
-              href="#contact"
+            <Link
+              href="/contact?interest=organization"
               className="glow-ember inline-flex items-center justify-center rounded-full bg-ember-500 px-8 py-4 text-sm font-semibold text-white transition-all hover:bg-ember-400"
             >
-              Start Your Project
-            </a>
-            <a
-              href="#work"
+              Grow Your Organization
+            </Link>
+            <Link
+              href="/contact?interest=athlete"
               className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-8 py-4 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:border-white/25 hover:bg-white/10"
             >
-              View Our Work
-            </a>
+              Create a Recruiting Video
+            </Link>
           </div>
+
+          <p className="animate-fade-up-delay-3 mt-6">
+            <Link
+              href="/sports-highlights"
+              className="text-sm font-medium text-iron-400 transition-colors hover:text-ember-400"
+            >
+              View Sports Highlights →
+            </Link>
+          </p>
         </div>
       </div>
 

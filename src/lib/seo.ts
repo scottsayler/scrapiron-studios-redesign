@@ -2,32 +2,36 @@ import type { Metadata } from "next";
 import {
   highlightVideos,
   images,
-  services,
   shortVideos,
   site,
   socialLinks,
 } from "@/lib/content";
 
 export const seo = {
-  title: `${site.name} | Sports Video Editing & Highlight Reels`,
+  title: `${site.name} | Digital & Creative Work for Sports`,
   description:
-    "Scrapiron Studios creates sports highlight reels, hype videos, and social content for teams and athletes in Illinois and nationwide. Where hustle meets highlight.",
+    "Scrapiron Studios helps sports organizations grow and athletes get noticed through websites, branding, photography, recruiting videos, highlight reels, and event coverage.",
   keywords: [
-    "sports video editing",
-    "highlight reel creation",
-    "sports highlight videos",
-    "hype video production",
-    "athlete spotlight videos",
-    "team highlight reels",
-    "social media sports content",
+    "sports website design",
+    "youth sports website design",
+    "sports marketing",
+    "sports branding",
     "recruiting highlight videos",
+    "athlete recruiting videos",
+    "sports videography",
+    "sports photography",
+    "tournament photography",
+    "sports event video",
+    "youth sports marketing",
+    "sports organization website",
+    "athletic training website",
     "Illinois sports videography",
     "Scrapiron Studios",
   ],
 } as const;
 
 export function createMetadata({
-  title = seo.title,
+  title,
   description = seo.description,
   path = "",
 }: {
@@ -35,22 +39,29 @@ export function createMetadata({
   description?: string;
   path?: string;
 } = {}): Metadata {
-  const url = `${site.url}${path}`;
+  const canonicalPath = path === "/" ? "" : path;
+  const url = `${site.url}${canonicalPath}`;
   const ogImage = images.og;
+  const isHome = !path || path === "" || path === "/";
+  const displayTitle = isHome
+    ? (title ?? seo.title)
+    : `${title} | ${site.name}`;
 
   return {
     metadataBase: new URL(site.url),
-    title: {
-      default: seo.title,
-      template: `%s | ${site.name}`,
-    },
+    title: isHome
+      ? {
+          default: seo.title,
+          template: `%s | ${site.name}`,
+        }
+      : title,
     description,
     keywords: [...seo.keywords],
     applicationName: site.name,
     authors: [{ name: site.name, url: site.url }],
     creator: site.name,
     publisher: site.name,
-    category: "Sports Video Production",
+    category: "Sports Digital and Creative Services",
     alternates: {
       canonical: url,
     },
@@ -66,7 +77,7 @@ export function createMetadata({
       },
     },
     openGraph: {
-      title,
+      title: displayTitle,
       description,
       url,
       siteName: site.name,
@@ -83,7 +94,7 @@ export function createMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title,
+      title: displayTitle,
       description,
       images: [ogImage],
     },
@@ -120,26 +131,52 @@ export function createJsonLd() {
     },
     sameAs,
     knowsAbout: [
-      "Sports video editing",
-      "Highlight reel production",
-      "Hype video production",
-      "Social media video content",
+      "Sports website design",
+      "Sports branding",
+      "Athlete recruiting videos",
+      "Sports highlight reels",
+      "Sports photography",
+      "Sports event coverage",
+      "Youth sports marketing",
     ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "Sports Video Services",
-      itemListElement: services.map((service, index) => ({
-        "@type": "Offer",
-        position: index + 1,
-        itemOffered: {
-          "@type": "Service",
-          name: service.title,
-          description: service.description,
-          provider: {
-            "@id": `${site.url}/#organization`,
+      name: "Sports Digital and Creative Services",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          position: 1,
+          itemOffered: {
+            "@type": "Service",
+            name: "Sports Organization Digital Services",
+            description:
+              "Websites, branding, content, and ongoing digital support for sports organizations.",
+            provider: { "@id": `${site.url}/#organization` },
           },
         },
-      })),
+        {
+          "@type": "Offer",
+          position: 2,
+          itemOffered: {
+            "@type": "Service",
+            name: "Athlete Recruiting Videos and Highlight Reels",
+            description:
+              "Recruiting films, highlight reels, and athlete content for coaches and programs.",
+            provider: { "@id": `${site.url}/#organization` },
+          },
+        },
+        {
+          "@type": "Offer",
+          position: 3,
+          itemOffered: {
+            "@type": "Service",
+            name: "Sports Event Coverage",
+            description:
+              "Photography, video, and promotional content for tournaments, camps, and showcases.",
+            provider: { "@id": `${site.url}/#organization` },
+          },
+        },
+      ],
     },
   };
 

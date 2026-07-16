@@ -48,28 +48,28 @@ export function Header() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-6 lg:flex">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
               className="text-sm text-iron-300 transition-colors hover:text-white"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
-          <a
-            href="#contact"
+          <Link
+            href="/contact"
             className="rounded-full bg-ember-500 px-5 py-2.5 text-sm font-medium text-white transition-all hover:bg-ember-400 hover:shadow-lg hover:shadow-ember-500/25"
           >
             Book a Project
-          </a>
+          </Link>
         </nav>
 
         <button
           type="button"
           aria-label="Toggle menu"
-          className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 md:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 lg:hidden"
           onClick={() => setMenuOpen((open) => !open)}
         >
           <span className="sr-only">Menu</span>
@@ -88,25 +88,25 @@ export function Header() {
       </div>
 
       {menuOpen && (
-        <div className="border-t border-white/5 bg-iron-950/98 px-6 py-6 md:hidden">
+        <div className="border-t border-white/5 bg-iron-950/98 px-6 py-6 lg:hidden">
           <nav className="flex flex-col gap-4">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 className="text-lg text-iron-300"
                 onClick={() => setMenuOpen(false)}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
-            <a
-              href="#contact"
+            <Link
+              href="/contact"
               className="mt-2 rounded-full bg-ember-500 px-5 py-3 text-center text-sm font-medium text-white"
               onClick={() => setMenuOpen(false)}
             >
               Book a Project
-            </a>
+            </Link>
           </nav>
         </div>
       )}
