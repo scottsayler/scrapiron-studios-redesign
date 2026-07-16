@@ -3,6 +3,11 @@ import { site } from "@/lib/content";
 
 const routes = [
   { path: "", priority: 1, changeFrequency: "weekly" as const },
+  {
+    path: "/trainer-growth-system",
+    priority: 0.95,
+    changeFrequency: "monthly" as const,
+  },
   { path: "/organizations", priority: 0.9, changeFrequency: "monthly" as const },
   { path: "/athletes", priority: 0.9, changeFrequency: "monthly" as const },
   { path: "/events", priority: 0.8, changeFrequency: "monthly" as const },

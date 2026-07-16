@@ -25,7 +25,7 @@ export function Hero() {
       <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pb-24 pt-36 lg:px-8 lg:pt-44">
         <div className="max-w-3xl">
           <p className="animate-fade-up mb-6 text-sm font-medium uppercase tracking-[0.2em] text-ember-400">
-            Sports organizations · Athletes · Events
+            Trainers · Athletes · Teams · Events
           </p>
 
           <p
@@ -40,27 +40,27 @@ export function Hero() {
             className="animate-fade-up-delay-1 mt-4 text-2xl font-semibold leading-snug tracking-tight text-iron-100 sm:text-3xl lg:text-4xl"
             style={{ fontFamily: "var(--font-display)" }}
           >
-            Digital and Creative Work Built for Sports
+            Digital Growth and Media for Sports Trainers and Athletes
           </h1>
 
           <p className="animate-fade-up-delay-2 mt-8 max-w-xl text-lg leading-relaxed text-iron-300 sm:text-xl">
-            Scrapiron Studios helps sports organizations grow, athletes get
-            noticed, and events capture the moments that matter through
-            websites, branding, photography, video, and digital content.
+            Scrapiron Studios builds websites, creates content, and produces
+            athlete media that help trainers grow and families take the next
+            step.
           </p>
 
           <div className="animate-fade-up-delay-3 mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
             <Link
-              href="/contact?interest=organization"
+              href="/trainer-growth-system"
               className="glow-ember inline-flex items-center justify-center rounded-full bg-ember-500 px-8 py-4 text-sm font-semibold text-white transition-all hover:bg-ember-400"
             >
-              Grow Your Organization
+              Explore the Trainer Growth System
             </Link>
             <Link
-              href="/contact?interest=athlete"
+              href="/athletes"
               className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-8 py-4 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:border-white/25 hover:bg-white/10"
             >
-              Create a Recruiting Video
+              View Athlete Media Services
             </Link>
           </div>
 

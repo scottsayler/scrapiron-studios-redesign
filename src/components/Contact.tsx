@@ -13,6 +13,10 @@ const athleteServices = new Set([
 ]);
 
 const organizationServices = new Set([
+  "Trainer website",
+  "Website Care",
+  "Growth",
+  "Growth Partnership",
   "Organization website",
   "Website redesign",
   "Branding",
@@ -26,6 +30,7 @@ type ContactProps = {
 };
 
 function mapInterestToService(interest: string | null): string {
+  if (interest === "trainer") return "Trainer website";
   if (interest === "organization") return "Organization website";
   if (interest === "athlete") return "Recruiting video";
   if (interest === "event") return "Event coverage";

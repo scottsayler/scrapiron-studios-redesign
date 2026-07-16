@@ -8,10 +8,20 @@ import {
 } from "@/lib/content";
 
 export const seo = {
-  title: `${site.name} | Digital & Creative Work for Sports`,
+  title: `${site.name} | Digital Growth & Media for Sports Trainers`,
   description:
-    "Scrapiron Studios helps sports organizations grow and athletes get noticed through websites, branding, photography, recruiting videos, highlight reels, and event coverage.",
+    "Scrapiron Studios helps sports trainers build businesses that grow through websites, ongoing marketing, content, booking support, and athlete recruiting media.",
   keywords: [
+    "website for sports trainers",
+    "sports trainer website design",
+    "marketing for sports trainers",
+    "private coach website",
+    "soccer trainer website",
+    "basketball trainer website",
+    "baseball instructor website",
+    "hockey trainer website",
+    "tennis coach website",
+    "social media content for trainers",
     "sports website design",
     "youth sports website design",
     "sports marketing",
@@ -131,6 +141,10 @@ export function createJsonLd() {
     },
     sameAs,
     knowsAbout: [
+      "Marketing for sports trainers",
+      "Private coach websites",
+      "Trainer booking and registration",
+      "Local SEO for sports trainers",
       "Sports website design",
       "Sports branding",
       "Athlete recruiting videos",
@@ -148,9 +162,9 @@ export function createJsonLd() {
           position: 1,
           itemOffered: {
             "@type": "Service",
-            name: "Sports Organization Digital Services",
+            name: "Trainer Growth System",
             description:
-              "Websites, branding, content, and ongoing digital support for sports organizations.",
+              "Websites, website care, ongoing growth marketing, and content support for independent sports trainers and small academies.",
             provider: { "@id": `${site.url}/#organization` },
           },
         },
@@ -168,6 +182,17 @@ export function createJsonLd() {
         {
           "@type": "Offer",
           position: 3,
+          itemOffered: {
+            "@type": "Service",
+            name: "Sports Organization Digital Services",
+            description:
+              "Websites, branding, content, and ongoing digital support for sports organizations.",
+            provider: { "@id": `${site.url}/#organization` },
+          },
+        },
+        {
+          "@type": "Offer",
+          position: 4,
           itemOffered: {
             "@type": "Service",
             name: "Sports Event Coverage",

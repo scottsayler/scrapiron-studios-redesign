@@ -47,7 +47,7 @@ export function Footer() {
           <p>
             © {year} {site.name}. All rights reserved.
           </p>
-          <p>Digital & creative work for sports · {site.location}</p>
+          <p>Digital growth and media for sports · {site.location}</p>
         </div>
       </div>
     </footer>

@@ -59,10 +59,10 @@ export function Header() {
             </Link>
           ))}
           <Link
-            href="/contact"
+            href="/contact?interest=trainer"
             className="rounded-full bg-ember-500 px-5 py-2.5 text-sm font-medium text-white transition-all hover:bg-ember-400 hover:shadow-lg hover:shadow-ember-500/25"
           >
-            Book a Project
+            Talk About Your Business
           </Link>
         </nav>
 
@@ -101,11 +101,11 @@ export function Header() {
               </Link>
             ))}
             <Link
-              href="/contact"
+              href="/contact?interest=trainer"
               className="mt-2 rounded-full bg-ember-500 px-5 py-3 text-center text-sm font-medium text-white"
               onClick={() => setMenuOpen(false)}
             >
-              Book a Project
+              Talk About Your Business
             </Link>
           </nav>
         </div>

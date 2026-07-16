@@ -11,12 +11,12 @@ export function AudiencePathways() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <SectionHeader
           eyebrow="Who we help"
-          title="Three clear paths. One sports-focused studio."
-          description="Whether you run a program, need recruiting film, or are covering an event — start with the path that fits."
+          title="Clear paths for every part of the sports community."
+          description="Whether you train athletes, run a program, need recruiting film, or are covering an event — start with the path that fits."
           id="audiences-heading"
         />
 
-        <div className="grid gap-6 lg:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2">
           {audiencePathways.map((pathway) => (
             <article
               key={pathway.href}

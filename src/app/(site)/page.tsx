@@ -4,6 +4,7 @@ import { GrowthPartner } from "@/components/GrowthPartner";
 import { Hero } from "@/components/Hero";
 import { OrganizationGrowth } from "@/components/OrganizationGrowth";
 import { RecruitingSection } from "@/components/RecruitingSection";
+import { TrainerOutcomes } from "@/components/TrainerOutcomes";
 import { VideoSection } from "@/components/VideoGrid";
 import { WhyScrapiron } from "@/components/WhyScrapiron";
 import { allVideos } from "@/lib/content";
@@ -12,6 +13,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <TrainerOutcomes />
       <AudiencePathways />
       <VideoSection
         id="work"

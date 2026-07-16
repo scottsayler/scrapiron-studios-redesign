@@ -8,6 +8,7 @@ import {
   allVideos,
   athleteProcess,
   athleteServices,
+  recruitingMediaOptions,
 } from "@/lib/content";
 import { createMetadata } from "@/lib/seo";
 
@@ -54,6 +55,45 @@ export default function AthletesPage() {
                 </li>
               ))}
             </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-white/5 bg-iron-900/30 py-24 lg:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <SectionHeader
+            eyebrow="Recruiting media options"
+            title="Start with the footage and support the athlete needs"
+            description="Each project is scoped around the footage available and the story the athlete needs to present. Final pricing is provided after the project is discussed."
+          />
+          <div className="grid gap-6 lg:grid-cols-3">
+            {recruitingMediaOptions.map((option) => (
+              <article
+                key={option.title}
+                className="rounded-2xl border border-white/10 bg-iron-950/60 p-7"
+              >
+                <h2
+                  className="text-2xl font-semibold text-white"
+                  style={{ fontFamily: "var(--font-display)" }}
+                >
+                  {option.title}
+                </h2>
+                <p className="mt-4 text-sm leading-relaxed text-iron-400">
+                  {option.description}
+                </p>
+                <ul className="mt-6 space-y-3">
+                  {option.includes.map((item) => (
+                    <li
+                      key={item}
+                      className="flex items-start gap-3 text-sm text-iron-300"
+                    >
+                      <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-ember-500" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            ))}
           </div>
         </div>
       </section>
