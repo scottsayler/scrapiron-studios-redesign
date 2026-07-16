@@ -18,15 +18,12 @@ export function Footer() {
               height={32}
               className="rounded-sm"
             />
-            <div>
-              <p
-                className="font-semibold text-white"
-                style={{ fontFamily: "var(--font-display)" }}
-              >
-                {site.name}
-              </p>
-              <p className="text-sm text-iron-500">{site.tagline}</p>
-            </div>
+            <p
+              className="font-semibold text-white"
+              style={{ fontFamily: "var(--font-display)" }}
+            >
+              {site.name}
+            </p>
           </div>
 
           <div className="flex flex-col items-center gap-6 md:items-end">
