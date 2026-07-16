@@ -10,21 +10,16 @@ export function Footer() {
     <footer className="border-t border-white/5 bg-iron-900/50 py-12">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
-          <div className="flex items-center gap-3">
+          <Link href="/" className="block shrink-0">
             <Image
-              src={images.logo}
+              src={images.wordmark}
               alt={site.name}
-              width={32}
-              height={32}
-              className="rounded-sm"
+              width={900}
+              height={280}
+              className="h-8 w-auto max-w-[220px] object-contain object-left sm:h-9"
+              priority
             />
-            <p
-              className="font-semibold text-white"
-              style={{ fontFamily: "var(--font-display)" }}
-            >
-              {site.name}
-            </p>
-          </div>
+          </Link>
 
           <div className="flex flex-col items-center gap-6 md:items-end">
             <SocialLinks />
