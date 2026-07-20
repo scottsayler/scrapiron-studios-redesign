@@ -44,10 +44,12 @@ export function createMetadata({
   title,
   description = seo.description,
   path = "",
+  index = true,
 }: {
   title?: string;
   description?: string;
   path?: string;
+  index?: boolean;
 } = {}): Metadata {
   const canonicalPath = path === "/" ? "" : path;
   const url = `${site.url}${canonicalPath}`;
@@ -76,10 +78,10 @@ export function createMetadata({
       canonical: url,
     },
     robots: {
-      index: true,
+      index,
       follow: true,
       googleBot: {
-        index: true,
+        index,
         follow: true,
         "max-image-preview": "large",
         "max-snippet": -1,

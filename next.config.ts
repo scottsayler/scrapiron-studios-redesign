@@ -22,22 +22,32 @@ const nextConfig: NextConfig = {
       {
         source: "/services",
         destination: "/organizations",
-        permanent: true,
+        statusCode: 301,
       },
       {
         source: "/highlights",
         destination: "/sports-highlights",
-        permanent: true,
+        statusCode: 301,
       },
       {
         source: "/recruiting",
         destination: "/athletes",
-        permanent: true,
+        statusCode: 301,
       },
       {
         source: "/portfolio",
         destination: "/work",
-        permanent: true,
+        statusCode: 301,
+      },
+      {
+        source: "/index.html",
+        destination: "/",
+        statusCode: 301,
+      },
+      {
+        source: "/home",
+        destination: "/",
+        statusCode: 301,
       },
     ];
   },

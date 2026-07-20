@@ -28,7 +28,7 @@ export function PageHero({
         <>
           <Image
             src={images.hero}
-            alt=""
+            alt="Athletes on a sports field at sunset — Scrapiron Studios digital and creative work for sports"
             fill
             priority
             className="object-cover object-center opacity-40"
