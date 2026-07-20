@@ -29,13 +29,11 @@ export default function RootLayout({
 
   return (
     <html lang="en" className={`${syne.variable} ${outfit.variable}`}>
-      <head>
+      <body className="min-h-screen overflow-x-hidden">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-      </head>
-      <body className="min-h-screen overflow-x-hidden">
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
           strategy="afterInteractive"
