@@ -98,7 +98,7 @@ export function createMetadata({
           url: ogImage,
           width: 1200,
           height: 630,
-          alt: `${site.name} — ${site.tagline}`,
+          alt: site.name,
         },
       ],
     },

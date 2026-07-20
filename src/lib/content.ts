@@ -41,7 +41,7 @@ export const images = {
   wordmark: "/scrapiron-wordmark.jpg",
   hero:
     "https://user-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,fl_lossy,h_720,w_960,f_auto,q_auto/unsplashcom/photo-1555888081-9f8b9a8cd171",
-  og: "https://custom-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,fl_lossy,h_630,w_1200,f_auto,q_auto/13584074/824086_858253.png",
+  og: "/og.jpg",
 } as const;
 
 export type VideoCategory =
